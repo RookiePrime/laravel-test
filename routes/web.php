@@ -16,3 +16,23 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/users', function() {
+    return "Welcome to the users page";
+});
+
+Route::get('/users', function() {
+    return ['PHP', 'HTML', 'Laravel'];
+});
+
+Route::get('/users', function() {
+    return response()->json([
+        'name' => 'Dary',
+        'course' => 'Laravel beginners to advanced'
+    ]);
+});
+
+Route::get('/users', function() {
+    return redirect('/');
+});
